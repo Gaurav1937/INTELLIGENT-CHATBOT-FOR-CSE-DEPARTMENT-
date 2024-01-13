@@ -1,0 +1,407 @@
+*{  /* '*' is universal selector , marking in this apply to all */
+    margin:0;
+    padding  :0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+html, body{
+       width:100%;
+       height:100%;
+}
+#nav{
+    height:145px;
+    width:100%;
+   /* background-color: red; */
+    display: flex;   /* flex make ement in one line*/
+    align-items: center;
+    padding: 0 150px;
+    position: fixed;
+    gap: 45px; /* gap between element*/
+    justify-self: flex-start;
+    z-index: 99;
+}
+#nav img{
+    height:112px;
+    border-radius: 45px;
+}
+#nav h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#cursor{
+    height:20px;
+    width:20px;
+    background-color: #20edd8c5;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height:380px;
+    width:380px;
+    background-color: #3398d74f;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px );
+    z-index: 9;
+}
+
+
+#backvideo video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+
+#chatbutton{
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.chat-container {
+    background-color: white;
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    width: 400px;
+    max-width: 400px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    display:none ;
+    z-index: 99;
+}
+
+.chat-header {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 99;
+}
+
+.chat-log {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    z-index: 99;
+}
+
+#chatLog h4{
+    color: gray;
+}
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    z-index: 99;
+}
+#userInput {
+    color: black;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 99;
+}
+
+.chat-input button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.user-message {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 4px;
+    z-index: 99;
+}
+
+.bot-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 4px;
+    z-index: 99;
+}
+
+#main{
+   position:relative;
+   background-color: rgba(45, 43, 43, 0.477);
+}
+
+#page1{
+    height:100vh;  /* vh is in relation to whole screen, while % is in relation to its parent , like if page1 height=100%, it will not show as we have not defined height of its parent i.e main, but using vh allocate it in ratio yo full screen*/
+    width: 100%;
+    position: relative;
+    display:flex;  /*other than lining them it also divide the children inside a parent in rows and columns */
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column; /*now the contents will apper in form as a colums */
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 92px;
+    font-weight: 900 ;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative ;
+    z-index: 10;
+}
+#page1 h1::before{
+    content:"LEARN.IMPROVE.INNOVATE" ;
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke:1px rgb(0, 255, 153) ;
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 35px;
+    font-weight: 700 ;
+}
+#page1 p{
+    font-size:20px ;
+    font-weight: 400 ;
+    margin-top: 20px;
+    width:40%;  /*you can adjust the with acc to % of page so thaae it will go to next line instead of a long single line*/
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+}
+
+#scroller{
+    /*background-color: red;*/
+    white-space:nowrap ;
+    overflow-x:auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10 ;
+}
+#scroller::-webkit-scrollbar{
+    display:none;
+}
+#scroller h4{
+    display:inline-block;
+    font-size:74px;
+    font-weight: 800 ;
+    margin-right: 15px;
+    color: transparent;
+    transition: all linear o.5s; /* due to this it will fade awa a bit slow (0.5 sec) not instantly after cursor is removed from it */
+    -webkit-text-stroke:2px rgb(145, 255, 0);
+}
+#scroller h4:hover{
+    color:rgb(123, 255, 0);
+}
+
+#scroller-in{ 
+    display: inline-block;
+    white-space: nowrap;
+    animation-name:scroll;
+    animation-duration: 16s; 
+    animation-timing-function: linear;
+    animation-iteration-count:infinite ;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translate(-100%);
+    }
+}
+
+
+#about-us{
+    height:40vh;
+    width: 100%;
+   /* background-color: red;*/
+    display: flex;
+    padding: 0 25px; /* padding used to generate space around an elements content and its border*/
+    align-items: center;
+    position: relative;   /* so the lur cursor can go behind the words*/
+    justify-content: space-between;
+}
+
+#about-us img{
+    height: 250px;
+    width: 250px;
+    border-radius: 20px; /* to make the border corners more smooth*/
+    z-index: 10;
+    object-fit:cover;
+}
+#about-us-in{
+    width:50%;
+    text-align: center;
+}
+#about-us-in h3{
+  font-size: 40px;
+  font-weight: 650;
+  margin-bottom: 32px;
+}
+#about-us-in p{
+    font-size: 18px;
+}
+
+#cards-container{
+    /* background-color: red; */
+    height:60vh;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    /*justify-content:space-evenly*/
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+#cards-container2{
+    /* background-color: red;  */
+   height:60vh;
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   /*justify-content:space-evenly*/
+   justify-content: center;
+   gap: 70px;
+   position: relative;
+   z-index: 10;
+}
+
+#card1.overlay{
+    opacity: 0;
+    background-image: none;
+
+}
+.card{
+    height: 80%;
+    width: 24%;
+     /* background-color: blue;  */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 1.8;
+}
+.card:hover{
+    overflow: visible;
+}
+#card1{
+    background-image:url(https://as1.ftcdn.net/v2/jpg/01/64/78/22/1000_F_164782298_qj4gDMDIyEnJJt0QbBD7XuTedcaJXJGE.jpg);
+    
+}
+#card2{
+    background-image: url(https://images5.alphacoders.com/923/923201.jpg);
+}
+#card3{
+    background-image: url(https://t4.ftcdn.net/jpg/02/20/24/05/360_F_220240507_Z8WDjgJliVAL5i41G2WjQtAVkSC066lV.jpg);
+}
+#card4{
+    background: url(https://www.swosu.edu/about/files/contact-us.jpg);
+}
+#card5{
+    background-image: url(https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_1316/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1519627962%2Fvltlogy23k1iid9pjffx.jpg);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    border-radius: 20px;
+     padding-top:150px; 
+    padding:50px;
+    opacity: 0;
+    transition: all ease 1.8;
+}
+
+.overlay h4{
+  color:black;
+  font-size: 25px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.overlay p{
+    color: black;
+    font-size: 16px;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+  }
+.card:hover{
+    transform: rotate3d(1,1,0,25deg);
+}
+
+
+#green-line {
+      height: 30vh;
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+      flex-direction: column;
+      /* background-color:red; */
+      background: linear-gradient(to left bottom,#119f3a, #ace022);
+      
+      
+}
+#green-line h4{
+      width: 50%;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+      color: black;
+      line-height: 40px;
+      text-transform: uppercase;
+}
+#green-line p{
+     font-size:20px ;
+}
+#green-line h5{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000db;
+    text-align:center;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+

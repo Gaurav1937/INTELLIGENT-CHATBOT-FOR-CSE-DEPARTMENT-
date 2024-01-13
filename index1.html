@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div id="nav">
+     <img src="https://vendotic.com/public/uploads/large/1321697440966jommlantlc1cbt5swpnsbot2eiwpds8ofhyqiibivgnevisncgxbkvsq2qlorjgyyqn165wspx3fmrrqbivt6scolf2g7chpu1cn.jpg"
+       alt=""/>
+     <h4>COURSES</h4>
+     <h4>faculty</h4>
+     <h4>facilities</h4>
+     <h4>contacts</h4>
+     <h4>events & news</h4>
+    </div>
+    <div id="cursor">
+    </div>
+    <div id="cursor-blur"></div>
+    <div id="backvideo">
+     <video
+     autoplay
+     loop 
+     muted
+     src="Background video.mp4"
+     ></video>
+    </div>
+
+    <button onclick="toggleChat()" id="chatbutton">Chat</button>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+             Chatbot -CSE Department
+        </div>
+        <div class="chat-log" id="chatLog">
+            <h4>ask something</h4>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder=" Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+     <div id="main">
+        <div id="page1">
+            <h1>LEARN.IMPROVE.INNOVATE</h1>
+            <h2>WELCOME TO MY SEM-3 MINI PROJECT PAGE</h2>
+            <p>i have made this frontend and chatbot mini project for this 3rd semester as i have no muuch mastery over js or python in this we will be mainly focusing on frontend along with a basic chatbot. i hope you will like it and do tell me where i can improve .
+               BY:-GAURAV SINGH BISHT , ROLL NO:-221871, BTECH CSE 3RD SEM, SEC:-C1
+            </p>
+        </div>
+        <div id="page2">
+            <div id="scroller">
+             <div id="scroller-in">
+                <h4>COURSE  .</h4>
+                <h4> FACULTY  .</h4>
+                <h4>RESEARCH  .</h4>
+                <h4>CLUBS AND ORGANISATION  .</h4>
+             </div>
+             <div id="scroller-in">
+                <h4>COURSE  .</h4>
+                <h4>FACULTY  .</h4>
+                <h4>RESEARCH  .</h4>
+                <h4>CLUBS AND ORGANISATION  .</h4>
+            </div>
+           </div>
+           <div id="about-us">
+            <img src="data:image/png;base64,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" 
+            alt="">
+            <div id="about-us-in">
+                <h3>ABOUT US</h3>
+                <p>The CSE department is a hub of innovation, driven by a mission to provide top-tier education and cutting-edge research. Our vision is to empower students with the skills needed to thrive in the dynamic field of computer science. Our distinguished faculty, experts in AI, machine learning, software engineering, cybersecurity, and data science, bring a wealth of knowledge and industry experience. Committed to excellence, we foster an environment that nurtures creativity, critical thinking, and a passion for learning, preparing our students for success in the ever-evolving tech landscape</p>
+            </div>
+            <img src="https://www.jeppiaarinstitute.org/img/course/computer-science-home.jpg" alt="">
+           </div>
+           <div id="cards-container">
+            <div class="card" id="card1">
+               <div class="overlay">
+                   <h4>Programs Offered</h4>
+                   <p>Our Computer Science and Engineering (CSE) Department offers a range of undergraduate programs, including B.Tech in Computer Science and Engineering, B.Tech CSBS (Computer Science and Business Systems), and B.Tech CSE (Hons.) with specializations in Artificial Intelligence, Machine Learning, Cybersecurity, Internet of Things & Cybersecurity, and Hindi. Additionally, the postgraduate program, M.Tech in Computer Science and Engineering, provides advanced studies and research opportunities.
+                </p>
+               </div>
+            </div>
+            <div class="card" id="card2">
+               <div class="overlay">
+                <h4>Faculty</h4>
+                <p>Our CSE Department's faculty is a dynamic group of experts specializing in AI, machine learning, cybersecurity, and software engineering. Committed to impactful research and teaching excellence, they shape a collaborative learning environment for students. Meet our exceptional faculty members, each contributing significantly to the vibrancy of our department</p>
+               </div>
+            </div>
+            <div class="card" id="card3">
+               <div class="overlay">
+                <h4>Facilities</h4>
+                <p>The CSE Department o our provides cutting-edge facilities for an immersive learning experience. Our well-equipped computer labs, specialized research facilities, and modern classrooms offer students hands-on access to the latest technology. With modern lecture halls, a resourceful library, and collaborative spaces, we ensure an environment that fosters innovation, research, and effective learning</p>
+               </div>
+            </div>
+           </div>
+           <div id="cards-container2">
+             <div class="card" id="card4">
+               <div class="overlay">
+                  <h4>Contact Information</h4>
+                  <p>
+                     For quick and direct communication with the CSE Department, you can find our contact details below. For inquiries, use the provided user-friendly form on our website, ensuring a prompt and efficient response.email address (cse.department@[university].edu), and phone number (+XX XXXX XXXX).</p>
+               </div>
+             </div>
+             <div class="card" id="card5">
+               <div class="overlay">
+                  <h4>Events & news</h4>
+                  <p>The Events and News section of the Computer Science and Engineering (CSE) Department serves as a dynamic portal, keeping our community abreast of the latest happenings, exciting developments, and insightful news within our academic domain.  From upcoming seminars and workshops to departmental achievements and student contributions. Stay connected with the pulse of our department, celebrating successes and staying in the loop with the latest happenings in the world of Computer Science and Engineering</p>
+               </div>
+             </div>
+           </div>
+           <div id="green-line">
+          <h4>Admissions Open 2024
+          </h4>
+          <br>
+          <p>The application process at Graphic Era is strictly based on the Merit of the qualifying examination with the entire Admission Process available for completion online</p>
+          <br>
+          <h5 id="g">Visit Our Campus</h5>
+          <h5 id="g">Talk to our Counsellors</h5>
+          <h5 id="g">Apply now</h5>
+           </div>
+        </div>
+     </div> 
+    
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="script1.js"></script>
+    </body>
+</html> 
+<!-- https://css-tricks.com/ -->
+<!-- https://cdnjs.com/libraries/gsap -->
